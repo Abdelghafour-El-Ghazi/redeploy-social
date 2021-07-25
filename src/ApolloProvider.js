@@ -2,7 +2,6 @@ import React from "react";
 import App from "./App";
 import {
   ApolloProvider as ApolloProvider2,
-  Query,
 } from '@apollo/react-components'
 import {
   ApolloClient,
