@@ -1,6 +1,10 @@
 import React from "react";
 import App from "./App";
 import {
+  ApolloProvider as ApolloProvider2,
+  Query,
+} from '@apollo/react-components'
+import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
@@ -28,7 +32,9 @@ const client = new ApolloClient({
 });
 
 export default (
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>
+  <ApolloProvider2 client={client}>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </ApolloProvider2>
 );
